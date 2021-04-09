@@ -42,7 +42,7 @@ class CalendarsController < ApplicationController
         wday_num = wday_num -7
       end
 
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num]}#wdaysから値を取り出す記述。wdays[wday_num(ここは数字であるべき。成立するのはwdayメソッドが配列を整数で抜く特性があって勝手に数字になってるから。)]
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num]}#wdaysから値を取り出す記述。wdays[wday_num(ここは数字であるべき。成立するのはwdayメソッドが配列を整数で抜く特性があって勝手に数字になってるから。)]
 
       @week_days.push(days)
     end
